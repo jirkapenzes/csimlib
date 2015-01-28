@@ -3,5 +3,8 @@
             [csimlib.core :refer :all]))
 
 (deftest a-test
-  (testing "FIXME, I fail."
+  (testing "FIXME 02, I fail."
     (is (= 0 1))))
+
+(run-tests)
+

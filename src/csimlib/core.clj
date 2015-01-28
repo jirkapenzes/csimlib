@@ -1,6 +1,9 @@
-(ns csimlib.core)
+(ns csimlib.core
+  (:require [csimlib.simulator :refer :all]
+            [csimlib.tick-scene :refer :all]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn -main [& args]
+  (println "Start simulation")
+  (simulate (tick-model)))
+
+(-main)
