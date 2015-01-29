@@ -13,7 +13,7 @@
     (loop
       [calendar (schedule (:initial-events model))
        local-time (:initial-time model)]
-      (when (or (end-condition local-time) (not-empty calendar))
+      (when (and (end-condition local-time) (not-empty calendar))
         (let [event (key (peek calendar))]
           (let [new-calendar (pop calendar)]
             (recur
