@@ -6,7 +6,7 @@
   [ event (scheduled-time event) ])
 
 (defn schedule [events]
-  (into (priority-map) (map make-scheduled-event events)))
+  (into (priority-map) (map make-scheduled-event (conj () events))))
 
 (defn simulate [model]
   (let [end-condition (:end-condition model)]
@@ -17,5 +17,5 @@
         (let [event (key (peek calendar))]
           (let [new-calendar (pop calendar)]
             (recur
-             (into new-calendar (schedule (conj () (execute event local-time))))
+             (into new-calendar (schedule (execute event)))
              (scheduled-time event))))))))

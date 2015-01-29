@@ -3,7 +3,7 @@
             [csimlib.tick-scene :refer :all]))
 
 (defn -main [& args]
-  (println "Start simulation")
+  (println "\nStart simulation")
   (simulate (tick-model)))
 
 (-main)
