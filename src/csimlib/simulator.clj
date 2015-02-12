@@ -1,6 +1,6 @@
 (ns csimlib.simulator
-    (:require [csimlib.model :refer :all])
-    (:use clojure.data.priority-map))
+  (:require [csimlib.model :refer :all])
+  (:use clojure.data.priority-map))
 
 (defn make-scheduled-event [event]
   [ event (scheduled-time event) ])
